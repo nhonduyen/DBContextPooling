@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBContextPooling.API", "DBContextPooling.API\DBContextPooling.API.csproj", "{4398CA90-3F12-442E-8915-1EBE3A6CAE12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4398CA90-3F12-442E-8915-1EBE3A6CAE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4398CA90-3F12-442E-8915-1EBE3A6CAE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4398CA90-3F12-442E-8915-1EBE3A6CAE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4398CA90-3F12-442E-8915-1EBE3A6CAE12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B429509E-63B8-46F3-B7EB-6E16B5EE49A8}
+	EndGlobalSection
+EndGlobal
