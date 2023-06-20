@@ -18,7 +18,6 @@ export const options = {
 };
 
 export default () => {
-    http.post(config.API_CREATE_MANY_ORDER_URL);
-    http.put(config.API_UPDATE_ORDER_URL);
+    http.put(config.API_BULK_UPDATE_ORDER_URL);
     sleep(1);
 };
