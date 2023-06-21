@@ -31,8 +31,7 @@ namespace DBContextPooling.API.Services.Implements
             foreach (var i in list)
             {
                 var row = dt.NewRow();
-                var props = i.GetType().GetProperties();
-                foreach (var prop in props)
+                foreach (var prop in properties)
                 {
                     row[prop.Name] = prop.GetValue(i, null);
                 }
@@ -161,13 +160,10 @@ namespace DBContextPooling.API.Services.Implements
         private string BuildUpdateQuery(string src, string dest, object o)
         {
             var columns = GetListColumns(o);
-            var exceptColumns = new List<string> { "Id" };
 
-            var updatePhase = columns.Where(c => !exceptColumns.Contains(c)).Select(x => $"{src}.{x}={dest}.{x}");
+            var updatePhase = columns.Where(c => !c.Equals("Id")).Select(x => $"{src}.{x}={dest}.{x}");
 
-            var sql = string.Format(@"UPDATE {0} SET {1} FROM {0} INNER JOIN {2} ON {0}.ID = {2}.ID;", src, string.Join(",", updatePhase), dest);
-
-            return sql;
+            return string.Format(@"UPDATE {0} SET {1} FROM {0} INNER JOIN {2} ON {0}.ID = {2}.ID;", src, string.Join(",", updatePhase), dest);
         }
     }
 }
